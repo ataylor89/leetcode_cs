@@ -82,11 +82,17 @@ public class Solution {
         Console.WriteLine($"Sum: {result}");
         Console.WriteLine("==== Diagnostics ====");
         Console.WriteLine($"Time for execution: {s.Elapsed.TotalMilliseconds}ms");
-        using (Process process = Process.GetCurrentProcess()) {
-            double peakMemoryUsage = process.PeakWorkingSet64 / Math.Pow(10, 6);
-            double currMemoryUsage = process.WorkingSet64 / Math.Pow(10, 6);
-            Console.WriteLine($"Current physical memory usage: {currMemoryUsage}MB");
-            Console.WriteLine($"Peak physical memory usage: {peakMemoryUsage}MB");
+        using (Process myProcess = Process.GetCurrentProcess()) {
+            Console.WriteLine($"Current physical memory usage: {myProcess.PeakWorkingSet64/Math.Pow(10,6)}MB");
+            Console.WriteLine($"Peak physical memory usage: {myProcess.WorkingSet64/Math.Pow(10,6)}MB");
+            Console.WriteLine($"Current virtual memory usage: {myProcess.VirtualMemorySize64/Math.Pow(10,6)}MB");
+            Console.WriteLine($"Peak virtual memory usage: {myProcess.PeakVirtualMemorySize64/Math.Pow(10,6)}MB");
+            Console.WriteLine($"Private memory size: {myProcess.PrivateMemorySize64/Math.Pow(10,6)}MB");
+            Console.WriteLine($"Total processor time: {myProcess.TotalProcessorTime.TotalMilliseconds}ms");
+            Console.WriteLine($"Machine name: {myProcess.MachineName}");
+            Console.WriteLine($"Process ID: {myProcess.Id}");
+            Console.WriteLine($"Process name: {myProcess.ProcessName}");
+            Console.WriteLine($"Process start time: {myProcess.StartTime}");
         }
     }
 }
