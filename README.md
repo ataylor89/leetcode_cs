@@ -2,7 +2,7 @@
 
 ## Running the code on Mac OS
 
-I'm able to compile the code on my MacBook using the compiler mcs. 
+I'm able to compile the code on my MacBook using the compiler mcs in zsh.
 
     mcs problem1.cs
 
