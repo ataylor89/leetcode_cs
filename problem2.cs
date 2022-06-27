@@ -10,7 +10,7 @@
  * on the two strings that produces a third string, corresponding to the sum of the two really big numbers.
  *
  * In this file we take the linked list approach. A ListNode is a node in a linked list.
- * We instantiate ListNodes to store the values of individual digits. 
+ * We instantiate ListNode to store the values of individual digits. 
  * We implement a function called AddTwoNumbers to add two linked lists and return a linked list corresponding to the sum.
  *
  * In addition we provide methods for converting a linked list to an int, and vice versa.
