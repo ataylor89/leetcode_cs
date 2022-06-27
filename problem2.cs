@@ -36,9 +36,9 @@ public class Solution {
     }
 
     public ListNode AddTwoNumbers(ListNode l1, ListNode l2) {
-        int carry = 0;
         ListNode sum = new ListNode();
         ListNode tail = sum;
+        int carry = 0;
         bool keepGoing = true;
         while (keepGoing)  {
             int val = carry;
@@ -55,7 +55,7 @@ public class Solution {
                 l1 = l1.next;
             if (l2 != null)
                 l2 = l2.next;
-                
+
             if (l1 == null && l2 == null && carry == 0)
                 keepGoing = false;
             else {
