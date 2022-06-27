@@ -1,3 +1,27 @@
+/*
+ * There are two ways of adding really big numbers in a computer program.
+ *
+ * One way is to use linked lists. A linked list can store a number of arbitrary size (thousands or millions of digits long).
+ * We can store two big numbers as linked lists, and then add them using an algorithm.
+ * The algorithm produces a third linked list, which corresponds to the sum of the two input numbers.
+ *
+ * A second way is to use strings. We can store a really big number in a string.
+ * If we want to add two really big numbers, we can store each of them as strings, and then perform an algorithm
+ * on the two strings that produces a third string, corresponding to the sum of the two really big numbers.
+ *
+ * In this file we take the linked list approach. A ListNode is a node in a linked list.
+ * We instantiate listnodes to store the values of individual digits. 
+ * We implement a function called AddTwoNumbers to add two linked lists and return a linked list corresponding to the sum.
+ *
+ * In addition we provide methods for converting a linked list to an int, and vice versa.
+ *
+ * At the end of the file we run diagnostics on the algorithm and the process.
+ * We calculate how much time the algorithm took to execute. We calculate how much memory and processor time the process used.
+ * We display statistics for our process and information about our process.
+ *
+ * This code can be run on Windows or Mac using command-line tools that come with Visual Studio. (See the Readme.)
+ */
+
 using System;
 using System.Diagnostics;
 
