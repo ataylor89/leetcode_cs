@@ -14,8 +14,6 @@ public class Solution {
         int[] nums = new int[4] {2,7,11,15};
         int target = 9;
         int[] answer = solution.TwoSum(nums, target);
-        int i = answer[0];
-        int j = answer[1];
-        Console.WriteLine($"i={i} j={j}");
+        Console.WriteLine($"i={answer[0]} j={answer[1]}");
     }
 }
