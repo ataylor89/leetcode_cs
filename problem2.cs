@@ -10,16 +10,14 @@
  * on the two strings that produces a third string, corresponding to the sum of the two really big numbers.
  *
  * In this file we take the linked list approach. A ListNode is a node in a linked list.
- * We instantiate ListNode to store the values of individual digits. 
- * We implement a function called AddTwoNumbers to add two linked lists and return a linked list corresponding to the sum.
+ * A ListNode stores a single digit in a number. A linked list of ListNodes stores a number.
  *
- * In addition we provide methods for converting a linked list to an int, and vice versa.
+ * The head node of a linked list is enough to give us every node in the linked list, and therefore every digit in a number.
+ * This is why the arguments to the AddTwoNumbers function are the respective head nodes of two linked lists.
  *
- * At the end of the file we run diagnostics on the algorithm and the process.
- * We calculate how much time the algorithm took to execute. We calculate how much memory and processor time the process used.
- * We display statistics for our process and information about our process.
+ * In the AddTwoNumbers function, we iterate through the two linked lists and add every digit.
  *
- * This code can be run on Windows or Mac using command-line tools that come with Visual Studio. (See the Readme.)
+ * This code can be run on Windows or Mac using the command-line tools that come with Visual Studio (see the Readme for more info.)
  */
 
 using System;
