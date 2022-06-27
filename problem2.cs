@@ -17,7 +17,7 @@
  *
  * In the AddTwoNumbers function, we iterate through the two linked lists and add every digit.
  *
- * This code can be run on Windows or Mac using the command-line tools that come with Visual Studio (see the Readme for more info.)
+ * This code can be run on Windows or Mac using the command-line tools that come with Visual Studio (see the Readme for more information.)
  */
 
 using System;
