@@ -24,4 +24,4 @@ This should compile the source code. Now type
 
     ./problem2.exe
 
-This should run the source code
+This should run the executable.
