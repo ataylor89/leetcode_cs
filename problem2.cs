@@ -83,16 +83,21 @@ public class Solution {
         Console.WriteLine("==== Diagnostics ====");
         Console.WriteLine($"Time for execution: {s.Elapsed.TotalMilliseconds}ms");
         using (Process myProcess = Process.GetCurrentProcess()) {
-            Console.WriteLine($"Current physical memory usage: {myProcess.PeakWorkingSet64/Math.Pow(10,6)}MB");
-            Console.WriteLine($"Peak physical memory usage: {myProcess.WorkingSet64/Math.Pow(10,6)}MB");
-            Console.WriteLine($"Current virtual memory usage: {myProcess.VirtualMemorySize64/Math.Pow(10,6)}MB");
-            Console.WriteLine($"Peak virtual memory usage: {myProcess.PeakVirtualMemorySize64/Math.Pow(10,6)}MB");
-            Console.WriteLine($"Private memory size: {myProcess.PrivateMemorySize64/Math.Pow(10,6)}MB");
-            Console.WriteLine($"Total processor time: {myProcess.TotalProcessorTime.TotalMilliseconds}ms");
-            Console.WriteLine($"Machine name: {myProcess.MachineName}");
-            Console.WriteLine($"Process ID: {myProcess.Id}");
-            Console.WriteLine($"Process name: {myProcess.ProcessName}");
-            Console.WriteLine($"Process start time: {myProcess.StartTime}");
+            // Display current process statistics
+            Console.WriteLine($"  Physical memory usage      : {Math.Round(myProcess.WorkingSet64/Math.Pow(10,6), 1)}MB");
+            Console.WriteLine($"  Base priority              : {myProcess.BasePriority}");
+            Console.WriteLine($"  Priority class             : {myProcess.PriorityClass}");
+            Console.WriteLine($"  User processor time        : {myProcess.UserProcessorTime}");
+            Console.WriteLine($"  Privileged processor time  : {myProcess.PrivilegedProcessorTime}");
+            Console.WriteLine($"  Total processor time       : {myProcess.TotalProcessorTime}");
+            Console.WriteLine($"  Paged system memory size   : {Math.Round(myProcess.PagedSystemMemorySize64/Math.Pow(10,6), 1)}MB");
+            Console.WriteLine($"  Paged memory size          : {Math.Round(myProcess.PagedMemorySize64/Math.Pow(10,6), 1)}MB");
+            // Display peak memory statistics for the process
+            Console.WriteLine($"  Peak physical memory usage : {Math.Round(myProcess.PeakWorkingSet64/Math.Pow(10,6), 1)}MB");
+            Console.WriteLine($"  Peak paged memory usage    : {Math.Round(myProcess.PeakPagedMemorySize64/Math.Pow(10,6), 1)}MB");
+            Console.WriteLine($"  Peak virtual memory usage  : {Math.Round(myProcess.PeakVirtualMemorySize64/Math.Pow(10,9), 1)}GB");
+            // Display when the process started
+            Console.WriteLine($"  Process start time:        : {myProcess.StartTime}");
         }
     }
 }
