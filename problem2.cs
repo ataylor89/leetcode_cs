@@ -96,7 +96,10 @@ public class Solution {
             Console.WriteLine($"  Peak physical memory usage : {Math.Round(myProcess.PeakWorkingSet64/Math.Pow(10,6), 1)}MB");
             Console.WriteLine($"  Peak paged memory usage    : {Math.Round(myProcess.PeakPagedMemorySize64/Math.Pow(10,6), 1)}MB");
             Console.WriteLine($"  Peak virtual memory usage  : {Math.Round(myProcess.PeakVirtualMemorySize64/Math.Pow(10,9), 1)}GB");
-            // Display when the process started
+            // Display process info
+            Console.WriteLine($"  Machine name               : {myProcess.MachineName}");
+            Console.WriteLine($"  Process name               : {myProcess.ProcessName}");
+            Console.WriteLine($"  Process ID                 : {myProcess.Id}");
             Console.WriteLine($"  Process start time:        : {myProcess.StartTime}");
         }
     }
