@@ -26,12 +26,15 @@ using System.Diagnostics;
 public class Solution {
 
     public class ListNode {
+
         public int val;
         public ListNode next;
+
         public ListNode(int val=0, ListNode next=null) {
             this.val = val;
             this.next = next;
         }
+
         public static ListNode toListNode(int num) {
             ListNode head = new ListNode();
             ListNode tail = head;
@@ -45,6 +48,7 @@ public class Solution {
             }
             return head;
         }
+        
         public static int fromListNode(ListNode node) {
             int sum = 0;
             int power = 1;
