@@ -4,11 +4,11 @@
 
 I'm able to compile the code on my MacBook using the compiler mcs in Terminal.
 
-    mcs problem1.cs
+    mcs Problem1.cs Statistics.cs
 
 mcs compiles the C# source code to an executable. I then use mono to run the exe file on my Mac.
 
-    mono problem1.exe
+    mono Problem1.exe
 
 These programs (mcs and mono) were already on my MacBook. They may have come with my installation of Visual Studio for Mac.
 
@@ -18,10 +18,10 @@ After installing Visual Studio on Windows, you can open Developer PowerShell for
 
 Navigate to the source directory, and type
 
-    csc problem2.cs
+    csc Problem2.cs Statistics.cs
 
 This should compile the source code. Now type
 
-    ./problem2.exe
+    ./Problem2.exe
 
 This should run the executable.
