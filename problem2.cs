@@ -33,8 +33,8 @@ public class Solution {
             this.next = next;
         }
         public static ListNode toListNode(int num) {
-            ListNode node = new ListNode();
-            ListNode tail = node;
+            ListNode head = new ListNode();
+            ListNode tail = head;
             while (num > 0) {
                 tail.val = num % 10;
                 num = num/10;
@@ -43,7 +43,7 @@ public class Solution {
                     tail = tail.next;
                 }
             }
-            return node;
+            return head;
         }
         public static int fromListNode(ListNode node) {
             int sum = 0;
