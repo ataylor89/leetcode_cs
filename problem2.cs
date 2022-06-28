@@ -35,6 +35,18 @@ public class Solution {
             this.next = next;
         }
 
+        public int intValue() {
+            ListNode node = this;
+            int sum = 0;
+            int power = 1;
+            while (node != null) {
+                sum += node.val * power;
+                power *= 10;
+                node = node.next;
+            }
+            return sum;
+        }
+
         public static ListNode toLinkedList(int num) {
             ListNode head = new ListNode();
             ListNode tail = head;
@@ -47,18 +59,6 @@ public class Solution {
                 }
             }
             return head;
-        }
-
-        public int intValue() {
-            ListNode node = this;
-            int sum = 0;
-            int power = 1;
-            while (node != null) {
-                sum += node.val * power;
-                power *= 10;
-                node = node.next;
-            }
-            return sum;
         }
     }
 
