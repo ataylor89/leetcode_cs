@@ -35,7 +35,7 @@ public class Solution {
             this.next = next;
         }
 
-        public static ListNode toListNode(int num) {
+        public static ListNode toLinkedList(int num) {
             ListNode head = new ListNode();
             ListNode tail = head;
             while (num > 0) {
@@ -48,8 +48,9 @@ public class Solution {
             }
             return head;
         }
-        
-        public static int fromListNode(ListNode node) {
+
+        public int intValue() {
+            ListNode node = this;
             int sum = 0;
             int power = 1;
             while (node != null) {
@@ -94,18 +95,18 @@ public class Solution {
 
     static void Main(string[] args) {
         Solution sol = new Solution();
-        int n1 = 942;
-        int n2 = 9465;
-        ListNode num1 = ListNode.toListNode(n1);
-        ListNode num2 = ListNode.toListNode(n2);
+        int num1 = 942;
+        int num2 = 9465;
+        ListNode node1 = ListNode.toLinkedList(num1);
+        ListNode node2 = ListNode.toLinkedList(num2);
         Stopwatch s = new Stopwatch();
         s.Start();
-        ListNode sum = sol.AddTwoNumbers(num1, num2);
+        ListNode node3 = sol.AddTwoNumbers(node1, node2);
         s.Stop();
-        int result = ListNode.fromListNode(sum);
-        Console.WriteLine($"Number1: {n1}");
-        Console.WriteLine($"Number2: {n2}");
-        Console.WriteLine($"Sum: {result}");
+        int sum = node3.intValue();
+        Console.WriteLine($"Number1: {num1}");
+        Console.WriteLine($"Number2: {num2}");
+        Console.WriteLine($"Sum: {sum}");
         Console.WriteLine("==== Diagnostics ====");
         Console.WriteLine($"Time for execution: {s.Elapsed.TotalMilliseconds}ms");
         using (Process myProcess = Process.GetCurrentProcess()) {
